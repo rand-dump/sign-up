@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root { font-family: 'DM Sans', sans-serif; color: #24252a; background: #f8f9fb; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+.page-shell { display: grid; grid-template-columns: minmax(340px, 43%) 1fr; min-height: 100vh; }
+.brand-panel { background: #263d36; color: #f9f8f3; padding: 57px clamp(40px, 7vw, 112px); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.brand-panel::after { content: ''; width: 370px; height: 370px; border: 1px solid rgba(255,255,255,.09); border-radius: 50%; position: absolute; bottom: -165px; right: -115px; }
+.brand-mark { width: 31px; height: 31px; border: 2px solid #d2e75e; border-radius: 50%; position: relative; display: inline-block; }
+.brand-mark::before, .brand-mark::after, .brand-mark span { content: ''; position: absolute; background: #d2e75e; border-radius: 5px; }
+.brand-mark::before { width: 2px; height: 48px; left: 13px; top: -10px; transform: rotate(45deg); }
+.brand-mark::after { width: 2px; height: 48px; left: 13px; top: -10px; transform: rotate(-45deg); }
+.brand-mark span { height: 2px; width: 36px; left: -4px; top: 13px; }
+.brand-copy { margin-top: auto; margin-bottom: auto; max-width: 390px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .17em; font-size: 11px; font-weight: 700; margin: 0 0 18px; }
+.brand-copy h1 { font-family: 'Playfair Display', serif; font-size: clamp(56px, 7vw, 88px); line-height: .95; margin: 0 0 28px; letter-spacing: -.04em; }
+.brand-copy h1 span, .mobile-logo strong span { color: #d2e75e; }
+.brand-description { color: #bdc9c4; line-height: 1.7; font-size: 16px; max-width: 320px; }
+.aside-note { border-top: 1px solid rgba(255,255,255,.16); padding-top: 23px; max-width: 315px; position: relative; z-index: 1; }
+.quote-mark { color: #d2e75e; font: 54px 'Playfair Display'; line-height: .5; vertical-align: -18px; margin-right: 5px; }
+.aside-note p { display: inline; color: #cbd3ce; line-height: 1.5; font-size: 13px; }
+.content-panel { display: flex; align-items: center; justify-content: center; padding: 50px 8%; }
+.form-wrap, .profile-wrap { width: min(100%, 520px); }
+.form-heading { margin-bottom: 34px; }
+.form-heading h2, .profile-heading h2 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 45px); line-height: 1.08; letter-spacing: -.03em; margin: 0 0 13px; color: #20272a; }
+.form-heading > p:last-child, .profile-heading > p:last-child { margin: 0; color: #777d80; font-size: 14px; line-height: 1.6; }
+.accent { color: #829319; margin-bottom: 13px; }
+.field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 21px 16px; }
+label { display: flex; flex-direction: column; gap: 9px; }
+label span { color: #454b4e; font-size: 12px; font-weight: 600; }
+input { border: 1px solid #dfe3e2; background: #fff; color: #25292c; border-radius: 5px; padding: 14px 15px; outline: none; transition: border-color .2s, box-shadow .2s; font-size: 13px; }
+input::placeholder { color: #b6babc; }
+input:focus { border-color: #8d9b29; box-shadow: 0 0 0 3px rgba(141,155,41,.13); }
+.full-field { grid-column: span 2; }
+.message { font-size: 12px; margin: 17px 0 -2px; }
+.error { color: #b64b4b; }
+.success { color: #4b8a56; }
+.primary-button { margin-top: 28px; width: 100%; border: 0; background: #263d36; color: #fff; padding: 16px 20px; border-radius: 5px; cursor: pointer; font-weight: 600; font-size: 13px; transition: background .2s, transform .2s; }
+.primary-button:hover { background: #38584d; transform: translateY(-1px); }
+.primary-button span, .logout-button span { color: #d2e75e; font-size: 18px; margin-left: 10px; vertical-align: -1px; }
+.terms { color: #9a9e9f; font-size: 11px; line-height: 1.6; text-align: center; margin: 21px auto 0; max-width: 365px; }
+a { color: #667718; text-decoration: underline; text-underline-offset: 2px; }
+.mobile-logo { display: none; }
+.profile-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 72px; }
+.logout-button { border: 1px solid #dfe3e2; color: #59605f; background: white; border-radius: 5px; padding: 10px 14px; cursor: pointer; font-size: 12px; }
+.logout-button span { color: #829319; margin-left: 6px; font-size: 15px; }
+.profile-heading { text-align: center; }
+.avatar { width: 78px; height: 78px; border-radius: 50%; margin: 0 auto 26px; display: flex; align-items: center; justify-content: center; color: #263d36; background: #d2e75e; font-family: 'Playfair Display'; font-size: 25px; text-transform: uppercase; }
+.details-card { margin-top: 42px; background: white; border: 1px solid #e6e9e7; border-radius: 7px; padding: 25px 27px 10px; box-shadow: 0 9px 28px rgba(34,45,39,.04); }
+.card-label { color: #829319; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 7px; }
+.detail-row { padding: 17px 0; border-bottom: 1px solid #edf0ef; display: flex; justify-content: space-between; gap: 12px; font-size: 13px; }
+.detail-row:last-child { border-bottom: 0; }
+.detail-row span { color: #929796; }
+.detail-row strong { color: #353c3b; font-weight: 600; text-align: right; }
+.status { color: #4b8a56 !important; }
+.status i { display: inline-block; width: 7px; height: 7px; background: #68b475; border-radius: 50%; margin-right: 6px; }
+@media (max-width: 720px) {
+  .page-shell { display: block; }
+  .brand-panel { display: none; }
+  .content-panel { min-height: 100vh; align-items: flex-start; padding: 32px 24px 50px; }
+  .mobile-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 60px; }
+  .mobile-logo .brand-mark { width: 24px; height: 24px; transform: scale(.8); transform-origin: left center; margin-right: -4px; }
+  .mobile-logo strong { font-family: 'Playfair Display', serif; font-size: 22px; }
+  .form-heading { margin-bottom: 29px; }
+  .profile-top { margin-bottom: 55px; }
+}
+@media (max-width: 430px) {
+  .field-grid { display: block; }
+  label { margin-bottom: 18px; }
+  .full-field { grid-column: auto; }
+  .mobile-logo { margin-bottom: 45px; }
+  .detail-row { align-items: flex-start; flex-direction: column; gap: 7px; }
+  .detail-row strong { text-align: left; }
+}
